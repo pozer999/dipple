@@ -1,0 +1,45 @@
+.posts{
+   width: 100%;
+  position: relative;
+  margin-top: 15px;
+}
+.postImage{
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  max-width: 100%;
+  padding: auto;
+}
+.textFormatPost{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 23px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  margin-left: 8px;
+  margin-bottom: 3px;
+}
+.publishDatePost{
+    font-size: 14px;
+}
+.titlePost{
+    font-weight: 600;
+}
+.descriptionPost{
+  font-size: 18px;
+}
+.ratingPost{
+  position: absolute;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 16px;
+  text-align: end;
+  top: 4px;
+  right: 8px;
+}
+.actionClickPost{
+  font-size: 16px;
+  text-align: end;
+  margin-right: 15px;
+}

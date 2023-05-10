@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+import classes from "../src/styles/App.module.css";
+import Navbar from './Components/UI/Navbar/Navbar';
+import SetPosts from './Components/UI/SetPosts/SetPosts';
+import ButtonToReturn from './Components/UI/ButtonToReturn/ButtonToReturn';
 
 function App() {
+const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetchPosts();
+  } ,[]);
+
+  async function fetchPosts() {
+  let response = await axios.get("https://dummyjson.com/users");
+  let data = response.data.users;
+  setPosts(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App}>
+    <>
+    {/* ------------------------------------------- */}
+        <Navbar/>
+        <SetPosts posts = {posts}/>
+        <ButtonToReturn/>
+    {/* ------------------------------------------- */}
+    </> 
     </div>
+   
   );
 }
 
