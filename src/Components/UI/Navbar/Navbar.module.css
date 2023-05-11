@@ -5,9 +5,8 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 6px;
+  padding-top: 10px;
   width: 90%;
-  background-color: white;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -17,9 +16,11 @@ header{
   justify-content: center;
 }
 .logoDipple{
-  width: 40px;
+  width: 30px;
 }
 .dayOfTheWeek{
   font-size: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
 }

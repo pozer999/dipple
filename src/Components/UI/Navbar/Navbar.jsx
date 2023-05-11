@@ -3,7 +3,7 @@ import classes from "../Navbar/Navbar.module.css";
 
 const Navbar = () => {
 
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday","Saturday"];
+  let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг","Пятница","Суббота"];
 
  const [dayOfTheWeek, setDayOfTheWeek] = useState(0);
  

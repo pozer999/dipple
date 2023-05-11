@@ -17,9 +17,14 @@
   border-bottom-right-radius: 30px;
   transition: opacity 1s ease-in-out;
   opacity: 100%;
-  
   }
   
+.btnShow:hover {
+    background-color: blueviolet;
+    color: black;
+    border: 4px black solid;
+}
+
  .btnHide {
       display: none;
       opacity: 0;

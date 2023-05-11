@@ -1,32 +1,26 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios";
+import React from "react";
 import classes from "../src/styles/App.module.css";
-import Navbar from './Components/UI/Navbar/Navbar';
-import SetPosts from './Components/UI/SetPosts/SetPosts';
-import ButtonToReturn from './Components/UI/ButtonToReturn/ButtonToReturn';
+import { Routes, Route } from "react-router-dom";
+
+// pages
+import {Blog} from './pages/Blog';
+import {SinglePage} from './pages/SinglePage';
+import {HomePages} from './pages/HomePages';
+import {LinksPages} from "./Components/LinksPages/LinksPages";
 
 function App() {
-const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetchPosts();
-  } ,[]);
-
-  async function fetchPosts() {
-  let response = await axios.get("https://dummyjson.com/users");
-  let data = response.data.users;
-  setPosts(data);
-  };
 
   return (
     <div className={classes.App}>
-    <>
-    {/* ------------------------------------------- */}
-        <Navbar/>
-        <SetPosts posts = {posts}/>
-        <ButtonToReturn/>
-    {/* ------------------------------------------- */}
-    </> 
+        <Routes>
+          <Route path="/" element={<LinksPages />}>
+            <Route path="homePages" element={<HomePages />}/>
+            <Route path="blog" element={<Blog />}/>
+            <Route path="blog/:id" element={<SinglePage />}/>
+            <Route path="*" element={<Blog />}/>
+          </Route>
+        </Routes>
+        
     </div>
    
   );
