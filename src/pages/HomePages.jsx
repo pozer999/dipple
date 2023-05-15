@@ -2,11 +2,8 @@ import React from 'react';
 
 export const HomePages = () => {
   return (
-    <div style={{fontSize: "30px"}}>
+    <div style={{fontSize: "50px", display: "flex", justifyContent: "center"}}>
       homePages
-      fhweauifhaweiulh
-      sfdjJFDS
-      fDSFDsF
     </div>
   );
 };

@@ -5,7 +5,7 @@
   position: fixed;
   justify-content: flex-end;
   bottom: 50px;
-  right: 15px;
+  right: 20px;
   border: 4px blueviolet solid;
   color: blueviolet;
   background-color: transparent;
@@ -19,11 +19,11 @@
   opacity: 100%;
   }
   
-.btnShow:hover {
+/* .btnShow:hover {
     background-color: blueviolet;
     color: black;
     border: 4px black solid;
-}
+} */
 
  .btnHide {
       display: none;
