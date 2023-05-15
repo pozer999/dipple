@@ -1,7 +1,8 @@
 .posts{
-   width: 100%;
+  width: 100%;
   position: relative;
   margin-top: 15px;
+  
 }
 .postImage{
   width: 100%;
@@ -17,12 +18,16 @@
   font-size: 23px;
   font-family: 'Golos Text', sans-serif;
   color: white;
-  margin-left: 8px;
-  margin-bottom: 15px;
+  padding-left: 8px;
+  padding-bottom: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.733) 0%, rgba(0, 0, 0, 0.459) 75%, rgba(0, 0, 0, 0) 100%);
 }
 .publishDatePost{
     font-size: 14px;
     font-family: 'Golos Text', sans-serif;
+    padding-top: 20px;
 }
 .titlePost{
     font-weight: 600;
@@ -31,6 +36,7 @@
 .descriptionPost{
   font-size: 18px;
   font-family: 'Golos Text', sans-serif;
+
 }
 .ratingPost{
   position: absolute;

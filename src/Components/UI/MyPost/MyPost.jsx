@@ -10,8 +10,10 @@ const MyPost = ({post, to}) => {
           <div className={classes.ratingPost}>Рейтинг: 4</div>
         <div className={classes.textFormatPost}>
           <div className={classes.publishDatePost}>2023-04-29 06:37</div>
-          <div className={classes.titlePost}>{post.title}</div>
-          <div className={classes.descriptionPost}>{post.id}</div>
+          <div className={classes.titlePost}>Заголовок поста</div>
+          {/* <div className={classes.titlePost}>{post.title}</div> */}
+          <div className={classes.descriptionPost}>Описание поста Описание поста<br/> Описание поста Описание поста</div>
+          {/* <div className={classes.descriptionPost}>{post.id}</div> */}
         </div>
         <img className={classes.postImage} src="../images/d.jpg" alt="Изображение не загружено..."/>
       </Link>

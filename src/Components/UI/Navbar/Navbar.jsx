@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import classes from "../Navbar/Navbar.module.css";
+import '../Navbar/Navbar.css';
 
-const Navbar = () => {
+
+const Navbar = ({theme}) => {
 
   let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг","Пятница","Суббота"];
 
@@ -12,10 +13,11 @@ const Navbar = () => {
  }, []);
 
   return (
-    <header>
-    <img className={classes.logoDipple} src= '../images/avatar.jpg' alt="Изображение не загружено..." />
-    <div className={classes.dayOfTheWeek}>{days[dayOfTheWeek]}</div>
-   </header>
+    <div class="headerNavbar">
+    <img class="logoDipple" src= '../images/footerLogo1.png' alt="Изображение не загружено..." />
+    {/* <button onClick = {designTheme}>Смена темы</button> */}
+    <div class={"dayOfTheWeek" + `${theme ? '_black' : ''}`}>{days[dayOfTheWeek]}</div>
+   </div>
   );
 };
 
