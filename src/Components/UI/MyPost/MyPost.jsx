@@ -7,7 +7,7 @@ const MyPost = ({post, to}) => {
   return (
 
       <Link to = {to} post={post} className={classes.posts}>
-          <div className={classes.ratingPost}>Рейтинг: 4</div>
+          <div className={classes.ratingPost}>Рейтинг: {post.id}</div>
         <div className={classes.textFormatPost}>
           <div className={classes.publishDatePost}>2023-04-29 06:37</div>
           <div className={classes.titlePost}>Заголовок поста</div>

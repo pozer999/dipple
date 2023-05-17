@@ -7,6 +7,7 @@ const SetPosts = () => {
 
   const [posts, setPosts] = useState([]);
 
+
   useEffect(() => {
     fetchPosts();
   } ,[]);

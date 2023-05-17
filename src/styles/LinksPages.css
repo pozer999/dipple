@@ -2,13 +2,14 @@
     font-size: 30px;
     text-decoration: none;
     font-family: 'Golos Text', sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .navLink_black{
     font-size: 30px;
     text-decoration: none;
     font-family: 'Golos Text', sans-serif;
     color: rgb(0, 0, 0);
+    padding-top: 10px;
 }
 /* .navLink:hover{
   color: black;
@@ -22,7 +23,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
   width: 90%;
   left: 0;
   right: 0;
