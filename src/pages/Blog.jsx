@@ -8,6 +8,11 @@ export const Blog = () => {
   
   return (
     <div>
+          <ul style={{display: "flex" , justifyContent: "center"}}>
+              <button>Дашборд</button>
+              <button>Домашнее задание</button>
+              <button>Категория 3</button>
+          </ul>
         <SetPosts />
         <ButtonToReturn />
     </div>

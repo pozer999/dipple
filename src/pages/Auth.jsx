@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Auth = () => {
+  document.documentElement.scrollIntoView(true);
+  
   return (
     <div style={{fontSize: "30px", margin: "0 auto", display: "grid", justifyContent: "center"}}>
       <p style={{color: "white", marginTop: "30px"}}>Регистрация в дипл</p>

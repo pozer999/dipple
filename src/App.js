@@ -38,11 +38,6 @@ function App() {
 
 
               {/* надо реализовать категории здесь */}
-              <ul style={{display: "flex" , justifyContent: "center"}}>
-                <button>Дашборд</button>
-                <button>Домашнее задание</button>
-                <button>Категория 3</button>
-              </ul>
 
         <Routes>
             <Route path="blog" element={<Blog />}/>
@@ -54,7 +49,7 @@ function App() {
              <div className='header'>
                 <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>Блог</NavLink>
                 <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>Мой класс</NavLink>
-                <div className={"navLink" + `${theme ? '' : '_black'}`}>adding</div>
+                <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>adding</NavLink>
                 <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>auth</NavLink>
               </div>
     </div>
