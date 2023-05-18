@@ -9,6 +9,7 @@ import Navbar from './Components/UI/Navbar/Navbar';
 import {Blog} from './pages/Blog';
 import {SinglePage} from './pages/SinglePage';
 import {HomePages} from './pages/HomePages';
+import Auth from "./pages/Auth";
 
 
 
@@ -29,17 +30,33 @@ function App() {
   return (
     <div className={classes.App}>
        {/* <button style={{position: "absolute", margin: "0 auto", left: 0, right: 0, width: "150px"}} onClick = {designTheme}>Смена темы</button> */}
-          <Navbar theme = {theme}/>
-              <div className='header'>
+          {/* <Navbar theme = {theme}/> */}
+              {/* <div className='header'>
                 <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>Блог</NavLink>
                 <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>Мой класс</NavLink>
-              </div>
+              </div> */}
+
+
+              {/* надо реализовать категории здесь */}
+              <ul style={{display: "flex" , justifyContent: "center"}}>
+                <button>Дашборд</button>
+                <button>Домашнее задание</button>
+                <button>Категория 3</button>
+              </ul>
+
         <Routes>
             <Route path="blog" element={<Blog />}/>
             <Route path="homePages" element={<HomePages />}/>
             <Route path="blog/:id" element={<SinglePage />}/>
+            <Route path="auth" element={<Auth />}/>
             <Route path="*" element={<Blog />}/>
         </Routes>
+             <div className='header'>
+                <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>Блог</NavLink>
+                <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>Мой класс</NavLink>
+                <div className={"navLink" + `${theme ? '' : '_black'}`}>adding</div>
+                <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>auth</NavLink>
+              </div>
     </div>
    
   );

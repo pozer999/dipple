@@ -1,8 +1,10 @@
 .navLink{
-    font-size: 30px;
+    font-size: 16px;
     text-decoration: none;
     font-family: 'Golos Text', sans-serif;
     color: rgb(255, 255, 255);
+    justify-content: center;
+    display: flex;
 }
 .navLink_black{
     font-size: 30px;
@@ -20,11 +22,15 @@
     text-decoration: underline;
 }
 .header{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: center;
+  width: 100%;
   left: 0;
   right: 0;
   margin: 0 auto;
+  bottom: 0;
+  position: fixed;
+  background-color: rgba(14, 0, 33, 1);
 }

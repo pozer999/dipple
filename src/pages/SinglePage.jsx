@@ -23,7 +23,7 @@ export const SinglePage = () => {
 
   return (
     <div>
-      <div className={classes.posts}>
+      <div className={classes.post_SinglePages}>
           <div className={classes.ratingPost_SinglePages}>Рейтинг: {post.id}</div>
           <div className={classes.textFormatPost_SinglePages}>
             <div className={classes.publishDatePost}>2023-04-29 06:37</div>

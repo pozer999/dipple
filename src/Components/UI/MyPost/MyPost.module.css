@@ -48,6 +48,11 @@
 }
 
 /* ------------------------SINGLEPAGES-------------------- */
+.post_SinglePages{
+  width: 100%;
+  position: relative;
+}
+
 .descriptionPost_SinglePage{
   font-size: 18px;
   font-family: 'Golos Text', sans-serif;
