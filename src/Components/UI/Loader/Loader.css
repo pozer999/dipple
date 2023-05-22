@@ -4,22 +4,18 @@
   font-weight: 1000;
 }
 
-.logo{
+.letter{
   display: flex;
-  color: white;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-.letter{
   color: blueviolet;
   font-size: 250px;
   font-family: 'Aristotelica';
-  font-weight: 600;
 }
 
-.container{
-  animation: letter 2s infinite 2s cubic-bezier(0.4, 0, 0.2, 1);
+.animationContainer{
+  animation: letterAnimatiion 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
   position:absolute;
   bottom: 0;
   background: rgba(14, 0, 33, 1);
@@ -27,11 +23,11 @@
   width: 100%;
 }
 
-@keyframes letter{
-from {
-  height: 100%;
-}
-to {
-  height: 0%;
-}
+@keyframes letterAnimatiion{
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
 }

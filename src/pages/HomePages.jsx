@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Loader from '../Components/UI/Loader/Loader';
 
 export const HomePages = () => {
-  document.documentElement.scrollIntoView(true);
-  
+  document.documentElement.scrollIntoView(true);  // возврат в начало страницы
+
+  const [loadingPost, setLoadingPost] = useState(true);
+  setTimeout(() => {
+     setLoadingPost(false);
+ }, 1000);
   return (
-    <div style={{fontSize: "50px", display: "flex", justifyContent: "center", color: "white"}}>
-      homePages
+    <div>
+      {loadingPost ?
+        <Loader />
+        : 
+        <div style={{fontSize: "50px", display: "flex", justifyContent: "center", color: "white"}}>
+          homePages
+        </div>
+      }
     </div>
   );
 };

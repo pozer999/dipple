@@ -4,12 +4,12 @@ import './Loader.css';
 const Loader = () => {
   return (
     <div>
-       <div class = 'logo'>
-          <div class = 'letter' style={{position:"relative"}}>P
-              <div class = 'letter' style={{position:"absolute", bottom:0}}>D
-               <div className="container"></div>
-            </div>
-            </div>
+       <div className = 'letter' style={{position:"relative"}}>P
+          <div className = 'letter' style={{position:"absolute", bottom:0}}>D
+            <div className="animationContainer"></div> 
+            {/* animationContainer перекрывает логотип с помощью анимации уменьшения высоты, 
+            тем самым иллюзия загрузки*/}
+          </div>
         </div>
     </div>
   );

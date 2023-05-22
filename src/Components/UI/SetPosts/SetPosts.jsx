@@ -7,12 +7,12 @@ import Loader from '../Loader/Loader';
 
 const SetPosts = () => {
   const [posts, setPosts] = useState([]);
-  const [loadingPosts, setloadingPosts] = useState(true);
+  const [loadingPosts, setLoadingPosts] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
           fetchPosts();
-    }, 1000000);
+    }, 1000);
 
   } ,[]);
 
@@ -20,27 +20,20 @@ const SetPosts = () => {
   let response = await axios.get("https://jsonplaceholder.typicode.com/posts");
   let data = response.data;
   setPosts(data);
-  setloadingPosts(false)
+  setLoadingPosts(false);
   };
 
   return (
     <div>
-      {loadingPosts ?
-      <Loader/>
-      : 
-      <div className={classes.posts}>
-         {posts.map(post => 
-      <MyPost key={post.id} post={post} to = {`/blog/${post.id}`}/>
-      )}
-      </div>
-      }
-
-
-      {/* <div className={classes.posts}>
-         {posts.map(post => 
-      <MyPost key={post.id} post={post} to = {`/blog/${post.id}`}/>
-      )}
-      </div> */}
+        {loadingPosts ?
+        <Loader/>
+        : 
+        <div className={classes.posts}>
+          {posts.map(post => 
+        <MyPost key={post.id} post={post} to = {`/blog/${post.id}`}/>
+        )}
+        </div>
+        }
     </div>
   );  
 };
