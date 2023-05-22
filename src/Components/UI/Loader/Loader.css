@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Aristotelica";
+  src: url("/public/fonts/aristotelica/Aristotelica-Display-DemiBold-trial.ttf");
+  font-weight: 1000;
+}
+
+.logo{
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.letter{
+  color: blueviolet;
+  font-size: 250px;
+  font-family: 'Aristotelica';
+  font-weight: 600;
+}
+
+.container{
+  animation: letter 2s infinite 2s cubic-bezier(0.4, 0, 0.2, 1);
+  position:absolute;
+  bottom: 0;
+  background: rgba(14, 0, 33, 1);
+  height: 0;
+  width: 100%;
+}
+
+@keyframes letter{
+from {
+  height: 100%;
+}
+to {
+  height: 0%;
+}
+}
