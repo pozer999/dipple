@@ -10,7 +10,7 @@ import {Blog} from './pages/Blog';
 import {SinglePage} from './pages/SinglePage';
 import {HomePages} from './pages/HomePages';
 import Auth from "./pages/Auth";
-
+import UserPage from "./pages/UserPage";
 
 
 function App() {
@@ -40,12 +40,14 @@ function App() {
             <Route path="homePages" element={<HomePages />}/>
             <Route path="blog/:id" element={<SinglePage />}/>
             <Route path="auth" element={<Auth />}/>
+            <Route path="user" element={<UserPage />}/>
             <Route path="*" element={<Blog />}/>
+            
         </Routes>
             <div className='header'>
               <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>Блог</NavLink>
               <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>Мой класс</NavLink>
-              <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>adding</NavLink>
+              <NavLink to="/user" className={"navLink" + `${theme ? '' : '_black'}`}>user</NavLink>
               <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>auth</NavLink>
             </div>
     </div>
