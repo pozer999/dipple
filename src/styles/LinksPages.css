@@ -17,9 +17,14 @@
   color: black;
   cursor: pointer;
 } */
+
 .active{
     color: blueviolet;
-    text-decoration: underline;
+    background-image: url("/public/images/Footer/active/dnevnikActive.png");
+    background-repeat:no-repeat;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
 }
 .header{
   display: grid;
@@ -33,4 +38,6 @@
   bottom: 0;
   position: fixed;
   background-color: rgba(14, 0, 33, 1);
+  clear:both;
+  height: 5%;
 }

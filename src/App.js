@@ -27,6 +27,7 @@ function App() {
   //     bodyDoc.style.backgroundColor = 'black';
   //   }
   // }
+
   return (
     <div className={classes.App}>
        {/* <button style={{position: "absolute", margin: "0 auto", left: 0, right: 0, width: "150px"}} onClick = {designTheme}>Смена темы</button> */}
@@ -45,10 +46,18 @@ function App() {
             
         </Routes>
             <div className='header'>
-              <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>Блог</NavLink>
-              <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>Мой класс</NavLink>
-              <NavLink to="/user" className={"navLink" + `${theme ? '' : '_black'}`}>user</NavLink>
-              <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>auth</NavLink>
+              <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>
+                <img src='../images/Footer/dnevnik.png'></img>
+              </NavLink>
+              <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>
+              <img src='../images/Footer/homework.png'></img>
+              </NavLink>
+              <NavLink to="/user" className={"navLink" + `${theme ? '' : '_black'}`}>
+              <img src='../images/Footer/progress.png'></img>
+              </NavLink>
+              <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>
+              <img src='../images/Footer/user.png'></img>
+              </NavLink>
             </div>
     </div>
    
