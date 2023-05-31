@@ -5,7 +5,6 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
   width: 100%;
   left: 0;
   right: 0;
@@ -16,10 +15,12 @@ header{
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
   left: 0;
   right: 0;
   margin: 0 auto;
+  background-color: rgba(14, 0, 33, 1);
 }
 .headerNavbar_black{
   display: flex;
@@ -33,17 +34,32 @@ header{
   background-color: black;
 }
 .logoDipple{
-  width: 50px;
+  height: 40%;
 }
 .dayOfTheWeek{
   font-size: 20px;
-  color: black;
+  color: rgb(255, 255, 255);
   font-family: 'Golos Text', sans-serif;
   font-weight: 700;
 }
 .dayOfTheWeek_black{
   font-size: 20px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: 'Golos Text', sans-serif;
   font-weight: 700;
+}
+.right_navbar{
+  height: 45px;
+  margin-left: 20px;
+}
+.counter{
+  background-color: red;
+  color: white; 
+  position: absolute; 
+  right: -5px; 
+  width: 45%;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }

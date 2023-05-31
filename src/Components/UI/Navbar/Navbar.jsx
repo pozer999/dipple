@@ -13,10 +13,17 @@ const Navbar = ({theme}) => {
  }, []);
 
   return (
-    <div class="headerNavbar">
-    <img class="logoDipple" src= '../images/footerLogo1.png' alt="Изображение не загружено..." />
+    <div className="headerNavbar">
+    <img className="logoDipple" src= '../images/logo.png' alt="Изображение не загружено..." />
     {/* <button onClick = {designTheme}>Смена темы</button> */}
-    <div class={"dayOfTheWeek" + `${theme ? '_black' : ''}`}>{days[dayOfTheWeek]}</div>
+    {/* <div className={"dayOfTheWeek" + `${theme ? '_black' : ''}`}>{days[dayOfTheWeek]}</div> */}
+    <div style={{display: "flex"}}>
+      <div style={{position: "relative"}}>
+      <div className='counter'>0</div>
+      <img className="right_navbar" src="../images/uved.png" alt="" />
+      </div>
+      <img className="right_navbar" src="../images/acc.png" alt="" />
+    </div>
    </div>
   );
 };

@@ -26,7 +26,6 @@ const ButtonToReturn = () => {
     <div>
      <button className={scroll < 600 ? "btnHide" : "btnShow"} onClick = {handleUpButton}>
       <img src= '../images/strelka.png' style={{width: '20px'}} alt="Изображение не загружено..."/>
-      
       </button>    
     </div>
   );

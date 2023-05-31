@@ -6,9 +6,13 @@
 }
 html{
   overflow-y: scroll;
+  background: rgba(14, 0, 33, 1);
 }
  
 .App{
-  width: 85%;
+  width: 90%;
   height: 100vh;
+}
+body{
+  width: 100%;
 }

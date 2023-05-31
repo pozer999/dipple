@@ -2,14 +2,15 @@ import React, {useState} from "react";
 import classes from "../src/styles/App.module.css";
 import { Routes, Route, NavLink } from "react-router-dom";
 import '../src/styles/LinksPages.css';
-import Navbar from './Components/UI/Navbar/Navbar';
+// import Navbar from './Components/UI/Navbar/Navbar';
 
 
 // pages
 import {Blog} from './pages/Blog';
 import {SinglePage} from './pages/SinglePage';
 import {HomePages} from './pages/HomePages';
-
+import Auth from "./pages/Auth";
+import UserPage from "./pages/UserPage";
 
 
 function App() {
@@ -26,20 +27,38 @@ function App() {
   //     bodyDoc.style.backgroundColor = 'black';
   //   }
   // }
+
   return (
     <div className={classes.App}>
        {/* <button style={{position: "absolute", margin: "0 auto", left: 0, right: 0, width: "150px"}} onClick = {designTheme}>Смена темы</button> */}
-          <Navbar theme = {theme}/>
-              <div className='header'>
+          {/* <Navbar theme = {theme}/> */}
+              {/* <div className='header'>
                 <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>Блог</NavLink>
                 <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>Мой класс</NavLink>
-              </div>
+              </div> */}
         <Routes>
             <Route path="blog" element={<Blog />}/>
             <Route path="homePages" element={<HomePages />}/>
             <Route path="blog/:id" element={<SinglePage />}/>
+            <Route path="auth" element={<Auth />}/>
+            <Route path="user" element={<UserPage />}/>
             <Route path="*" element={<Blog />}/>
+            
         </Routes>
+            <div className='header'>
+              <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>
+                <img src='../images/Footer/dnevnik.png'></img>
+              </NavLink>
+              <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>
+              <img src='../images/Footer/homework.png'></img>
+              </NavLink>
+              <NavLink to="/user" className={"navLink" + `${theme ? '' : '_black'}`}>
+              <img src='../images/Footer/progress.png'></img>
+              </NavLink>
+              <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>
+              <img src='../images/Footer/user.png'></img>
+              </NavLink>
+            </div>
     </div>
    
   );
