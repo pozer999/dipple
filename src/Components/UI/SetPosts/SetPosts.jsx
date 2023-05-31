@@ -8,57 +8,68 @@ import Loader from '../Loader/Loader';
 const SetPosts = () => {
   const [posts, setPosts] = useState([]);
   const [loadingPosts, setLoadingPosts] = useState(true);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const [limit, setLimit] = useState(10);
+  const [errorRequestToPosts, setErrorRequestToPosts] = useState(false);
   const lastElement = useRef();
   let observer = useRef();
 
-  // useEffect(() => {
-  //   if(loadingPosts) return;
-  //   if(observer.current) observer.current.disconnect();
-  //   let callback = function(entries, observer){
-  //      if (entries[0].isIntersecting && page < 100){ //здесь 100 надо поменять на totalCount, с бэка прийдет значение общего количества страниц
-  //         console.log(page);
-  //         setPage(page + 1);
-  //         console.log(page);
-  //      }
-       
-  //   }
-  //   setLoadingPosts(true);
-  //   observer.current = new IntersectionObserver(callback);
-  //   observer.current.observe(lastElement.current);
-  // }, [loadingPosts])
+  useEffect(() => {
+    if(loadingPosts === false) return;
+    if(observer.current) observer.current.disconnect();
+    var callback = function(entries, observer){
+       if (entries[0].isIntersecting && page < 10){ //здесь 100 надо поменять на totalCount, с бэка прийдет значение общего количества страниц
+          setPage(page => page + 1)
+       }  
+    };
+    // setLoadingPosts(true);
+    observer.current = new IntersectionObserver(callback);
+    observer.current.observe(lastElement.current);
+  }, [loadingPosts])
 
+useEffect(() => {
+  console.log("page: ", page);
+})
 
   useEffect(() => {
-          fetchPosts(limit, page);
+        fetchPosts(limit, page);
   }, [page]);
 
-    
-
   async function fetchPosts(limit, page) {
-  let response = await axios.get("https://jsonplaceholder.typicode.com/posts",{
-    params:{
-      _limit : limit,
-      _page: page
-    }
-  });
+    try {
+      let response = await axios.get("https://jsonplaceholder.typicode.com/posts",{
+        params:{
+          _limit : limit,
+          _page: page
+         }
+        }
+      );
 
-  let data = response.data;
-  setPosts(data);
-  setLoadingPosts(false);
+      let data = response.data.reverse();
+      setPosts([...data, ...posts]);
+      console.log("обновили setPosts: ", posts);
+      setLoadingPosts(false);
+      } catch (error) {
+        console.error("Ошибка axios запроса постов", error);
+          setTimeout(() => {
+            setErrorRequestToPosts(true);
+          }, 10000
+        )
+      }
+        
+      
   };
 
   return (
     <div>
         <div className={classes.posts}>
           {posts.map(post => 
-          <MyPost key={Number(post.id)} post={post} to = {`/blog/${post.id}`}/>
+          <MyPost key={post.id} post={post} to = {`/blog/${post.id}`}/>
           )}
         </div>
-          <div ref={lastElement} style={{height: 20, background:"red"}}></div>
+          <div ref={lastElement} style={{height: 0.001}}></div>
         {loadingPosts &&
-           <Loader/>
+           <Loader error = {errorRequestToPosts}/>
         }
     </div>
   );  

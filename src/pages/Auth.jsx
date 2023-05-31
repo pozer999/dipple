@@ -4,9 +4,6 @@ import Loader from '../Components/UI/Loader/Loader';
 const Auth = () => {
   document.documentElement.scrollIntoView(true);
   const [loadingPost, setLoadingPost] = useState(true);
-  setTimeout(() => {
-     setLoadingPost(false);
- }, 1000);
  
   
   return (

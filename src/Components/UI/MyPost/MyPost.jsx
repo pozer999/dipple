@@ -13,7 +13,7 @@ const MyPost = ({post, to}) => {
           <div className={classes.titlePost}>Заголовок поста</div>
           <div className={classes.descriptionPost}>Описание поста Описание поста<br/> Описание поста Описание поста</div>
         </div>
-        <img className={classes.postImage} src="../images/d.jpg" alt="Изображение не загружено..."/>
+        <img loading='lazy' className={classes.postImage} src="../images/d.jpg" alt="Изображение не загружено..."/>
       </Link>
   );
 };

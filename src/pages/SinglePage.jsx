@@ -13,9 +13,7 @@ export const SinglePage = () => {
   const [loadingPost, setLoadingPost] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
        fetchPosts();
-    }, 1000);
   }, [id]);
 
   async function fetchPosts() {
@@ -23,6 +21,7 @@ export const SinglePage = () => {
     let data = response.data;
     setPost(data);
     setLoadingPost(false);
+    console.log("запрос для единичного поста");
     document.documentElement.scrollIntoView(true); // возврат в начало страницы
   };
 

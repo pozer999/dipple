@@ -31,3 +31,15 @@
       height: 0%;
     }
 }
+.errorRequestToPosts{
+  color: white; 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  margin-bottom: 100px;
+  justify-content: center;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 20px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Loader.css';
-
-const Loader = () => {
+const Loader = ({error}) => {
+  
   return (
     <div>
        <div className = 'letter' style={{position:"relative"}}>P
@@ -11,6 +11,9 @@ const Loader = () => {
             тем самым иллюзия загрузки*/}
           </div>
         </div>
+        {error &&
+        <h2 className='errorRequestToPosts'>Ошибка загрузки страницы</h2>
+        }
     </div>
   );
 };

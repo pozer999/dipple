@@ -5,9 +5,7 @@ export const HomePages = () => {
   document.documentElement.scrollIntoView(true);  // возврат в начало страницы
 
   const [loadingPost, setLoadingPost] = useState(true);
-  setTimeout(() => {
-     setLoadingPost(false);
- }, 1000);
+
   return (
     <div>
       {loadingPost ?
