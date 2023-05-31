@@ -8,7 +8,7 @@ const Auth = () => {
   
   return (
     <div>
-      {loadingPost ?
+      {loadingPost === false ?
       <Loader />
       : 
       <div style={{fontSize: "30px", margin: "0 auto", display: "grid", justifyContent: "center"}}>

@@ -8,7 +8,7 @@ export const HomePages = () => {
 
   return (
     <div>
-      {loadingPost ?
+      {loadingPost === false ?
         <Loader />
         : 
         <div style={{fontSize: "50px", display: "flex", justifyContent: "center", color: "white"}}>
