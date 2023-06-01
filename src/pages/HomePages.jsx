@@ -5,7 +5,7 @@ export const HomePages = () => {
   document.documentElement.scrollIntoView(true);  // возврат в начало страницы
 
   const [loadingPost, setLoadingPost] = useState(true);
-  setLoadingPost(true); //чтоб не ругался линтер
+  // setLoadingPost(true); //чтоб не ругался линтер
   
   return (
     <div>
