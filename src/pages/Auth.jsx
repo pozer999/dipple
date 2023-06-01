@@ -4,14 +4,14 @@ import UserPage from './UserPage';
 
 const Auth = () => {
   document.documentElement.scrollIntoView(true);
-  const [loadingUserPage, setLoadingUserPage] = useState(true);
+  // const [loadingUserPage, setLoadingUserPage] = useState(true);
   const [accessIsAllowed, setAccessIsAllowed] = useState(false);
   return (
     <div>
-      {loadingUserPage === false ?
+      {/* {loadingUserPage === false ?
         <Loader />
       : 
-      <>
+      <> */}
         {accessIsAllowed ?
         <UserPage />
         :
@@ -27,10 +27,11 @@ const Auth = () => {
             <input type="password" />
             <p></p>
           <button style={{marginTop: "30px", fontSize: "20px", borderRadius: "10px", background:"rgba(14, 0, 33, 1)", color: "white", border: "2px solid white", display: "flex", alignItems: "center", justifyContent: "center", height: "35px"}} onClick = {() => setAccessIsAllowed(true)}>Зарегестрироваться</button>
+          {/* при нажатии на копку зарегестрироваться будет переход на страницу пользователя */}
         </div>
         }
-        </>
-      }
+        {/* </>
+      } */}
     </div>
   );
 };
