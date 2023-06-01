@@ -39,7 +39,7 @@ export const SinglePage = () => {
             </div>
             <img className={classes.postImage_SinglePages} src="../images/d.jpg" alt="Изображение не загружено..."/>
         </div>
-        <div className={classes.descriptionPost_SinglePage}>{post.body}<br/> <br/>{post.body}<br/> <br/>{post.body}<br/> <br/>{post.body}<br/> <br/>{post.body}</div>
+        <div className={classes.descriptionPost_SinglePage}>{post.body}<br/>{post.body}<br/>{post.body}<br/>{post.body}<br/>{post.body}<br/>{post.body}</div>
      </div>
     }
        
