@@ -13,10 +13,10 @@ export const SinglePage = () => {
   const [loadingPost, setLoadingPost] = useState(true);
 
   useEffect(() => {
-       fetchPosts();
+       fetchPosts(id);
   }, [id]);
 
-  async function fetchPosts() {
+  async function fetchPosts(id) {
     let response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
     let data = response.data;
     setPost(data);

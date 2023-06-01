@@ -18,8 +18,8 @@ const SetPosts = () => {
     if(loadingPosts === false) return;
     if(observer.current) observer.current.disconnect();
     var callback = function(entries, observer){
-       if (entries[0].isIntersecting && page < 10){ //здесь 100 надо поменять на totalCount, с бэка прийдет значение общего количества страниц
-          setPage(page => page + 1)
+       if (entries[0].isIntersecting && page <= 10){ //здесь 100 надо поменять на totalCount, с бэка прийдет значение общего количества страниц
+          setPage(page => page + 1);
        }  
     };
     // setLoadingPosts(true);
@@ -27,9 +27,9 @@ const SetPosts = () => {
     observer.current.observe(lastElement.current);
   }, [loadingPosts])
 
-useEffect(() => {
-  console.log("page: ", page);
-})
+    useEffect(() => {
+      console.log("page: ", page);
+    })
 
   useEffect(() => {
         fetchPosts(limit, page);
@@ -45,7 +45,7 @@ useEffect(() => {
         }
       );
 
-      let data = response.data.reverse();
+      let data = response.data;
       setPosts([...data, ...posts]);
       console.log("обновили setPosts: ", posts);
       setLoadingPosts(false);
