@@ -8,7 +8,7 @@ export const HomePages = () => {
   const [loadingHomePages, setLoadingHomePages] = useState(true);
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(0);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(40);
 
   
   useEffect(() => {
@@ -42,10 +42,9 @@ export const HomePages = () => {
         : 
         <div style={{display: 'flex',  color: "white",  display: "flex",fontSize: "50px", flexDirection: "column", margin: "auto", justifyContent: "center", alignItems: "center"}}>
           <p>homePages</p> 
-          {images.map(img => {
-            // <img src={img.url} alt="noooooo" width={60}/>
-            <p>{img.title} key = {img.title}</p>
-            })
+          {images.map(img => 
+            <img key = {img.title} src={img.url} alt="noooooo" width={60}/>
+            )
          }
           </div>
        

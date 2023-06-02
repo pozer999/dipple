@@ -46,7 +46,7 @@ const SetPosts = () => {
       );
 
       let data = response.data;
-      setPosts([...data, ...posts]);
+      setPosts([...posts, ...data]);
       console.log("обновили setPosts: ", posts);
       setLoadingPosts(false);
       } catch (error) {
