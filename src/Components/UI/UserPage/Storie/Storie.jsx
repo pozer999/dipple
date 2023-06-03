@@ -1,8 +1,9 @@
 import React from 'react';
+import './Storie.css';
 
 const Storie = () => {
     return (
-        <div >
+        <div>
             <img src="../images/UserPage/Storie.png" alt="" />
         </div>
     );

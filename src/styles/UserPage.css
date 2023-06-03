@@ -1,43 +1,9 @@
-.Verh{
-    display: flex;
-}
+.UserPage{
+    font-family: 'Golos Text', sans-serif;
 
-.fullName{
-
-    order: 1;
-    padding-top: 76px;
-    padding-right: 17px;
-    padding-left: 16px;
-    width: 246px;
-    font-family: Golos;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #000B26;
-}
-
-.avatar{
- 
-    order: 1;
-    padding-top: 68px;
-    padding-left: 16px;
-    -moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;
-}
-
-.school{
-    align-items: start;
-
-    order: 2 !important;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    color: #000B26;
 }
 
 
-.UserHeader{
-    color: aliceblue;
-}
 
 .UserContainer{
     display: flex;
@@ -47,6 +13,6 @@
 
 .SchollContainer{
     display: flex;
-
     align-items: center;
 }
+

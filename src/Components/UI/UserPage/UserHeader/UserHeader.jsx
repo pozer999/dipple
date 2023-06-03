@@ -7,17 +7,17 @@ const UserHeader = () => {
     return (
         <header className='UserHeader'>
             <div className='UserContainer'>
-                <img src="./../images/UserPage/Avatar.png" alt="" />
-                <div>
+                <img className="Avatar" src="./../images/UserPage/Avatar.png" alt="" />
+                <div className="StudentInfo">
                     <div>Минуллина Камиля Руслановна</div>
                     <div>8А класс </div>
                 </div>
             </div>
             <div className='SchollContainer'>
                 <img className='SAC' src="./../images/UserPage/SquareAcademicCap.png" alt="" />
-                <div>Школа</div>
+                <div className="School">Школа</div>
             </div>
-            <div>«Лицей №1 с углублённым изучением английского языка»</div>
+            <div className="SchoolInfo">«Лицей №1 с углублённым изучением английского языка»</div>
         </header>
     );
 };
