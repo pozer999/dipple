@@ -10,7 +10,7 @@ const UserHeader = () => {
                 <img className="Avatar" src="./../images/UserPage/Avatar.png" alt="" />
                 <div className="StudentInfo">
                     <div>Минуллина Камиля Руслановна</div>
-                    <div>8А класс </div>
+                    <div className="Class">8А класс </div>
                 </div>
             </div>
             <div className='SchollContainer'>

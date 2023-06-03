@@ -1,12 +1,25 @@
 .OtherProject{
-
+    margin-top: 4%;
     color: #000B26;
+    height: 16vh;
+
 }
 
 .Projects{
     display: flex;
+    justify-content: space-around;
+    height: 100%;
 }
 
 .SuperService{
-    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.Project {
+    margin-top: 4%;
+    background-color: #000B26;
+    width: 30%;
+    border-radius: 16px;
 }

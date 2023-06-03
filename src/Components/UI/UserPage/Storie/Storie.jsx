@@ -3,7 +3,7 @@ import './Storie.css';
 
 const Storie = () => {
     return (
-        <div>
+        <div className='Storie'>
             <img src="../images/UserPage/Storie.png" alt="" />
         </div>
     );

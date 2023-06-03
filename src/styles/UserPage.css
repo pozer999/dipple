@@ -3,16 +3,3 @@
 
 }
 
-
-
-.UserContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.SchollContainer{
-    display: flex;
-    align-items: center;
-}
-

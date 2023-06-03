@@ -38,6 +38,8 @@
   bottom: 0;
   position: fixed;
   background-color: #F9FAFB;
+  box-shadow:0 0 3px #909090; box-shadow:0 0 5px #a2a2a2; box-shadow:0 0 10px #cecece;
   clear:both;
   height: 5%;
+  border: 0.5px solid #0000001F
 }

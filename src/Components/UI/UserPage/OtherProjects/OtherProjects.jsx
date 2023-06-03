@@ -1,6 +1,5 @@
 import React from 'react';
 import './OtherProjects.css';
-import Project from '../Project/Project';
 
 const OtherProjects = () => {
     return (
@@ -9,9 +8,15 @@ const OtherProjects = () => {
                 Другие суперсервисы
             </div>
             <div className='Projects'>
-                <Project />
-                <Project />
-                <Project />
+                <div className='Project'>
+                    Трипл
+                </div>
+                <div className='Project'>
+                    Пипл
+                </div>
+                <div className='Project'>
+                    Журнал
+                </div>
             </div>
         </div>
     );

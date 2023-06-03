@@ -3,36 +3,44 @@
 }
 
 .UserContainer{
-    margin-top: 68px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.SchollContainer{
-    margin-top: 25px;
+    margin-top: 15%;
+    padding-right: 5%;
     display: flex;
     align-items: center;
-}
-
-.Avatar{
-    margin-left: 16px;
-    border-radius: 40px;
-    -moz-box-shadow:0 0 10px #754EE4; -webkit-box-shadow:0 0 30px #754EE4; box-shadow:0 0 90px #754EE4;
-}
-
-.StudentInfo{
-    padding-left: 16px;
-}
-
-.School{
-    padding-left: 6px;
     font-family: Golos;
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
 }
 
+.SchollContainer{
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+}
+
+.Avatar{
+    border-radius: 40px;
+    -moz-box-shadow:0 0 10px #754EE4; -webkit-box-shadow:0 0 30px #754EE4; box-shadow:0 0 90px #754EE4;
+}
+
+.StudentInfo{
+    padding-left: 5%;
+}
+
+.Class{
+font-size: 16px;
+font-weight: 400;
+}
+
+.School{
+    padding-left: 1%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .SchoolInfo{
-    margin-top: 10px;
+    margin-top: 3%;
+    font-size: 16px;
+    font-weight: 400;
 }
