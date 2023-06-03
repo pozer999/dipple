@@ -67,7 +67,7 @@ const SetPosts = () => {
           <MyPost key={post.id} post={post} to = {`/blog/${post.id}`}/>
           )}
         </div>
-          <div ref={lastElement} style={{height: 0.001}}></div>
+          <div ref={lastElement} style={{height: 10}}></div>
         {loadingPosts &&
            <Loader error = {errorRequestToPosts}/>
         }

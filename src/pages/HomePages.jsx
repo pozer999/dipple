@@ -12,7 +12,7 @@ export const HomePages = () => {
 
   
   useEffect(() => {
-    console.log("limit:",limit);
+    console.log("limit: ",limit);
     fetchHomePage(limit, page);
   }, [page]);
 
@@ -24,23 +24,17 @@ export const HomePages = () => {
        }
       });
     let data = response.data;
-    console.log("data setImages", Array.isArray(data),data);
     setImages([...data]);
-    // console.log("обновили setImages", Array.isArray(images), images);
     setLoadingHomePages(false);
-    // console.log("images: ", images);
-    // console.log(data.url);
   }
-
-
-    useEffect(() => console.log("images: ", images), [])
+    useEffect(() => console.log("images: ", images), [images])
 
   return (
     <div>
       {loadingHomePages === true ?
         <Loader />
         : 
-        <div style={{display: 'flex',  color: "white",  display: "flex",fontSize: "50px", flexDirection: "column", margin: "auto", justifyContent: "center", alignItems: "center"}}>
+        <div style={{display: 'flex',  display: "flex",fontSize: "50px", flexDirection: "column", margin: "auto", justifyContent: "center", alignItems: "center"}}>
           <p>homePages</p> 
           {images.map(img => 
             <img key = {img.title} src={img.url} alt="noooooo" width={60}/>
