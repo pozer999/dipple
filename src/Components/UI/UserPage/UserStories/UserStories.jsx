@@ -1,5 +1,6 @@
 import React from 'react';
 import Storie from '../Storie/Storie';
+import './UserStories.css';
 
 const UserStories = () => {
     return (
@@ -12,3 +13,4 @@ const UserStories = () => {
 };
 
 export default UserStories;
+
