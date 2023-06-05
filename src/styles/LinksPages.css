@@ -3,8 +3,9 @@
     text-decoration: none;
     font-family: 'Golos Text', sans-serif;
     color: rgb(255, 255, 255);
-    justify-content: center;
-    display: flex;
+    /* justify-content: center; */
+    /* display: flex; */
+    text-align: center;
 }
 .navLink_black{
     font-size: 30px;
@@ -20,11 +21,12 @@
 
 .active{
     color: blueviolet;
-    background-image: url("/public/images/Footer/active/dnevnikActive.png");
-    background-repeat:no-repeat;
+    border-bottom: 2px solid blueviolet;
+    /* background-image: url("/public/images/Footer/active/dnevnikActive.png"); */
+    /* background-repeat:no-repeat;
     justify-content: center;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
 .header{
   display: grid;
@@ -38,8 +40,8 @@
   bottom: 0;
   position: fixed;
   background-color: #F9FAFB;
-  box-shadow:0 0 3px #909090; box-shadow:0 0 5px #a2a2a2; box-shadow:0 0 10px #cecece;
+  box-shadow:0 0 10px #8b8b8b;
   clear:both;
-  height: 5%;
+  height: 8%;
   border: 0.5px solid #0000001F
 }

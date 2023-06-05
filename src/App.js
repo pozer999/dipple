@@ -8,7 +8,8 @@ import '../src/styles/LinksPages.css';
 // pages
 import {Blog} from './pages/Blog';
 import {SinglePage} from './pages/SinglePage';
-import {HomePages} from './pages/HomePages';
+// import {HomePages} from './pages/HomePages';
+import Dashboard from "./pages/Dashboard";
 import Auth from "./pages/Auth";
 import UserPage from "./pages/UserPage";
 
@@ -38,7 +39,7 @@ function App() {
               </div> */}
         <Routes>
             <Route path="blog" element={<Blog />}/>
-            <Route path="homePages" element={<HomePages />}/>
+            <Route path="dashboard" element={<Dashboard />}/>
             <Route path="blog/:id" element={<SinglePage />}/>
             <Route path="auth" element={<Auth />}/>
             <Route path="user" element={<UserPage />}/>
@@ -46,17 +47,21 @@ function App() {
             
         </Routes>
             <div className='header'>
-              <NavLink to="/blog"      className={"navLink" + `${theme ? '' : '_black'}`}>
-                <img src='../images/Footer/dnevnik.png'></img>
+              <NavLink to="/dashboard"      className={"navLink" + `${theme ? '' : '_black'}`}>
+                <img src='../images/Footer/dashboard.png'></img>
+                <div>Дашборд</div>
               </NavLink>
-              <NavLink to="/homePages" className={"navLink" + `${theme ? '' : '_black'}`}>
-              <img src='../images/Footer/homework.png'></img>
+              <NavLink to="/blog" className={"navLink" + `${theme ? '' : '_black'}`}>
+              <img src='../images/Footer/blog.png'></img>
+              <div>Блог</div>
               </NavLink>
               <NavLink to="/user" className={"navLink" + `${theme ? '' : '_black'}`}>
-              <img src='../images/Footer/progress.png'></img>
+              <img src='../images/Footer/gdz.png'></img>
+              <div>Решебник</div>
               </NavLink>
               <NavLink to="/auth" className={"navLink" + `${theme ? '' : '_black'}`}>
               <img src='../images/Footer/user.png'></img>
+              <div>Профиль</div>
               </NavLink>
             </div>
     </div>
