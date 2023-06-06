@@ -16,14 +16,14 @@ const Auth = () => {
         <UserPage />
         :
         <div style={{fontSize: "30px", margin: "0 auto", display: "grid", justifyContent: "center"}}>
-            <p style={{color: "white", marginTop: "30px"}}>Регистрация в дипл</p>
-            <p style={{color: "white"}}>ФИО</p>
+            <p style={{color: "black", marginTop: "30px"}}>Регистрация в дипл</p>
+            <p style={{color: "black"}}>ФИО</p>
             <input type="text" />
-            <p style={{color: "white"}}>Почта</p>
+            <p style={{color: "black"}}>Почта</p>
             <input type="email" />
-            <p style={{color: "white"}}>Пароль</p>
+            <p style={{color: "black"}}>Пароль</p>
             <input type="password" />
-            <p style={{color: "white"}}>Подтверди пароль</p>
+            <p style={{color: "black"}}>Подтверди пароль</p>
             <input type="password" />
             <p></p>
           <button style={{marginTop: "30px", fontSize: "20px", borderRadius: "10px", background:"rgba(14, 0, 33, 1)", color: "white", border: "2px solid white", display: "flex", alignItems: "center", justifyContent: "center", height: "35px"}} onClick = {() => setAccessIsAllowed(true)}>Зарегестрироваться</button>

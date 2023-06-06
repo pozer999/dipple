@@ -31,6 +31,7 @@
   font-size: 25px;
   color: rgba(132, 68, 236, 1);
   font-weight: 800;
+  white-space: nowrap;
 }
 .linears{
   color: rgba(153, 162, 173, 1);

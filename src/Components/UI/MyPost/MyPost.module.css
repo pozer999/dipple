@@ -27,15 +27,17 @@
     font-size: 14px;
     font-family: 'Golos Text', sans-serif;
     padding-top: 20px;
+    color: white;
 }
 .titlePost{
     font-weight: 600;
     font-family: 'Golos Text', sans-serif;
+    color: white;
 }
 .descriptionPost{
   font-size: 18px;
   font-family: 'Golos Text', sans-serif;
-
+  color: white;
 }
 .ratingPost{
   position: absolute;
